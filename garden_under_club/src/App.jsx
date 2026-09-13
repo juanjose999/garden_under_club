@@ -1,11 +1,15 @@
 import './App.css'
+import { AppRouter } from './AppRouter/AppRouter'
+import { AuthProvider } from './context/AuthProvider'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     
+    <AuthProvider>
+      <AppRouter ></AppRouter>
+
+      </AuthProvider>
     </>
   )
 }
